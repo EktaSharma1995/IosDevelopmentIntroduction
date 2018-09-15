@@ -32,3 +32,14 @@ for i in 1...100{
     }
     
 }
+
+let myArray:[Int] = [44,21,33,44]
+
+var statusOfFirstElement = myArray.first
+
+var statusOfLastElement = myArray.last
+
+if statusOfFirstElement == 44 || statusOfLastElement == 44
+{
+    print("44 is present in the array")
+}
