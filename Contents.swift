@@ -59,6 +59,27 @@ if statusOfFirstElement == 44 || statusOfLastElement == 44
     print("44 is present in the array")
 }
 
+
+//  6.Write a Swift program to rotate the elements of an array of integers to left direction. Therefore {1, 2, 3} yields {2, 3, 1}
+
+func rotate_left(_ arrayToRotate: [Int], numberOfRotations: Int) -> [Int] {
+    
+    let count = numberOfRotations
+    var arrayAfterRotation = arrayToRotate
+    
+    for _ in 1...count
+    {
+        arrayAfterRotation.removeFirst()
+        arrayAfterRotation.append(arrayToRotate.first!)
+    }
+    
+    return arrayAfterRotation
+}
+
+print(rotate_left([1, 2, 3] , numberOfRotations: 1))
+
+
+
 // 7. Write a Swift program to find the larger value of a given array of integers and set all the other elements with that value. Return the changed array
 
 var arrayOfIntegers: [Int] = [10,210,173,48,9]
@@ -119,6 +140,9 @@ for (key,value) in counts {
     }
     
 }
+
+
+
 
 
 
