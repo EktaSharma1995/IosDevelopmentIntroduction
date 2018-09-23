@@ -17,6 +17,11 @@ for i in 0...15
     }
 }
 
+
+print("")
+print("Q2:")
+print("")
+
 // 2.  Write a swift program which compute, the average marks of the following students Then, this average is used to determine the corresponding grade
     //Student Name    Marks
     //Don               84
@@ -32,6 +37,7 @@ for i in 0...15
     //<80       C
     //<90       B
     //<100      A
+
 
 var studentAverage = ["Don":84,"William":77, "Jason":88, "Justin":95,"Tom":68 ]
 
@@ -68,6 +74,10 @@ for (key,value) in studentAverage
     }
 }
 
+
+print("")
+print("Q3:")
+print("")
 // 3. Write a Swift program to construct the following pattern
 //    *
 //    * *
@@ -88,6 +98,10 @@ for var lineNumber in 0 ..< countOfLine
     print ("")
 }
 
+
+print("")
+print("Q4:")
+print("")
 //  4.Write a swift program which iterates through the integers from 1 to 100. But for multiples of three print "Hum" instead of the number and for the multiples of five print "Ber". For numbers which are multiples of both three and five print "HumBer".
 
 for i in 1...100
@@ -105,8 +119,17 @@ for i in 1...100
         print("Hum")
     }
     
+    else
+    {
+        print(i)
+    }
+    
 }
 
+
+print("")
+print("Q5:")
+print("")
 //  5. Write a Swift program to check if 44 appears as either the first or last element in a given array of integers. The array length should be 1 or       more
 
 let myArray:[Int] = [44,21,33,44]
@@ -121,6 +144,9 @@ if statusOfFirstElement == 44 || statusOfLastElement == 44
 }
 
 
+print("")
+print("Q6:")
+print("")
 //  6.Write a Swift program to rotate the elements of an array of integers to left direction. Therefore {1, 2, 3} yields {2, 3, 1}
 
 func rotate_left(_ arrayToRotate: [Int], numberOfRotations: Int) -> [Int]
@@ -143,6 +169,10 @@ print(rotate_left([1, 2, 3] , numberOfRotations: 1))
 print(rotate_left([11, 32, 53,8] , numberOfRotations: 3))
 
 
+
+print("")
+print("Q7:")
+print("")
 // 7. Write a Swift program to find the larger value of a given array of integers and set all the other elements with that value. Return the changed array
 
 var arrayOfIntegers: [Int] = [10,210,173,48,9]
@@ -150,8 +180,12 @@ var arrayWithChangedValues = arrayOfIntegers
 
 var largestOfArray = arrayOfIntegers.max();
 
+print(arrayOfIntegers)
+print("")
+
 for value in arrayOfIntegers
 {
+
     let changedValue: Int = largestOfArray!
     
     if value != largestOfArray
@@ -172,14 +206,18 @@ for value in arrayOfIntegers
     
 }
 
+
+print("")
+print("Q8:")
+print("")
 //  8. Write a Swift program to check if a given array of integers contains 2 numbers more than twice.
 
 let arrOfIntegers = [1,2,3,3,3,4,5,6,6,6]
-var counts: [Int: Int] = [:]
+var countDictionary: [Int: Int] = [:]
 
-arrOfIntegers.forEach { counts[$0, default: 0] += 1 }
+arrOfIntegers.forEach { countDictionary[$0, default: 0] += 1 }
 
-for (key,value) in counts
+for (key,value) in countDictionary
 {
     
     if value > 2
